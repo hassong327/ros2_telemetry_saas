@@ -72,7 +72,3 @@
 # - github.token    → use GITHUB_TOKEN env var instead
 
 sync.remote: "git+https://github.com/hassong327/ros2_telemetry_saas.git"
-repos:
-  primary: "."
-  additional:
-    - "/home/hassong327/.beads-planning"
