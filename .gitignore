@@ -5,3 +5,21 @@
 .beads-credential-key
 .beads/proxieddb/
 *.gate.lock*
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Runtime data
+spool/
+**/spool/
+*.log
