@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "ros2_telemetry_saas",
+  "project_id": "802626c5-c4eb-44e1-bdb5-65d5d1cb84a6"
+}
