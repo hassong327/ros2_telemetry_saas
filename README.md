@@ -24,6 +24,6 @@ cp -f .env.example .env
 make config
 ```
 
-`.env`의 이미지 placeholder는 이미지 버전 고정 작업에서 실제 태그로 바뀔 예정입니다. 현재 `compose.yml`이 없어 `make config`는 안내 메시지를 출력합니다. Compose 구성이 추가되면 `make config`로 설정을 확인하고 `make up`으로 서비스를 시작할 수 있습니다.
+`.env.example`에는 ROS Jazzy 이미지 digest와 Kafka 4.3.1, Kafka UI v1.5.0 이미지 태그가 고정되어 있습니다. 새 버전으로 변경할 때는 `.env.example`의 참조를 갱신하고 세 이미지를 다시 pull해 확인하세요. 현재 `compose.yml`이 없어 `make config`는 안내 메시지를 출력합니다. Compose 구성이 추가되면 `make config`로 설정을 확인하고 `make up`으로 서비스를 시작할 수 있습니다.
 
 Makefile은 `up`, `down`, `logs`, `consume`, `smoke`, `test`, `config` 타깃을 제공합니다. Phase 1 파일이 아직 없는 타깃은 안내 메시지를 출력합니다. `make down`은 Compose 구성이 있을 때 `docker compose down -v`를 실행하므로 데이터 볼륨도 삭제합니다.
