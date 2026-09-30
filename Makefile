@@ -16,7 +16,7 @@ smoke:
 	@if [ -f scripts/smoke_test.sh ]; then bash scripts/smoke_test.sh; else echo "scripts/smoke_test.sh is not available yet (Phase 1)."; fi
 
 test:
-	@if [ -d common/telemetry_schema/tests ]; then python3 -m pytest common/telemetry_schema/tests; else echo "Common schema tests are not available yet (Phase 1)."; fi
+	@if [ -d common/telemetry_schema/tests ]; then PYTHONPATH=common/telemetry_schema/src python3 -m pytest common/telemetry_schema/tests; else echo "Common schema tests are not available yet (Phase 1)."; fi
 
 config:
 	@if [ -f compose.yml ]; then docker compose config; else echo "compose.yml is not available yet; docker compose config will run after Phase 1 adds it."; fi
